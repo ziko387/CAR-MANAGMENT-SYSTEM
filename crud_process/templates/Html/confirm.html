@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<title>Add Car</title>
+<style>
+    body{
+         font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .dino {
+        text-align: center;
+        margin-top: 50px;
+        background-color: #c2b9b9ed;
+        padding: 20px;
+        border-radius: 14px 14px 14px 14px;
+    }
+    form {
+        display: inline-block;
+        text-align: left;
+        margin-top: 20px;
+    }
+    button {
+        margin-top: 10px;
+    }
+    input, select {
+        width: 50%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    
+    
+</style>
+</head>
+    <body>
+        <div class="dino">
+            <h2>Are you sure you want to delete {{ car.car_name }}?</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                <a href="{% url 'car_list' %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </body>
+
+
+    </html>

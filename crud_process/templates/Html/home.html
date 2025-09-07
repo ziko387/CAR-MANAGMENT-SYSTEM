@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+ <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<title>Home Page</title>
+<style>  
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    
+    } 
+    .container {
+        text-align: center;
+        margin-top: 100px;
+        background-color: #c2b9b9ed;
+        padding: 50px;
+        border-radius: 14px 14px 14px 14px;
+    }  
+    </style>
+
+</head> 
+ <html>
+    <body>
+        <div class="container">
+            <h1>Welcome to Car Management System</h1>
+            <div class="links">
+           <button class="btn btn-primary"><a href="{% url 'add_car' %}" style="color: white; text-decoration: none;">Add Car</a></button>
+           <button class="btn btn-secondary"><a href="{% url 'car_list' %}" style="color: white; text-decoration: none;">View Cars</a></button>
+            </div>
+        </div>
+        </body>
+
+</html>
