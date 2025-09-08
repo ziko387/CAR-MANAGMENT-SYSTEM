@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-(kmqejwadfyu_-xm7*#&w!tztu2w(*-6-1g(sus193*ttx=)h_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+     'localhost',
+    '127.0.0.1',
+    'b469775960c9.ngrok-free.app',
+]
 
 import os
 
@@ -42,7 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crud_process'
+    'crud_process',
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -53,7 +59,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
+
 
 ROOT_URLCONF = 'CRUD.urls'
 

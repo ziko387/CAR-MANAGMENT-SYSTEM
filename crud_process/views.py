@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect,get_object_or_404
-
 from .forms import CarForms
 from .models import CarItems
+
+API_BASE = ' https://b469775960c9.ngrok-free.app/api/car-items/'
 
 # Create your views here.
 def home(request):
